@@ -182,17 +182,16 @@ Grafana visualizes Prometheus metrics in dashboards.
 1. Add the Grafana repository:
 
    ```bash
-   sudo apt install -y apt-transport-https software-properties-common wget
    sudo mkdir -p /etc/apt/keyrings/
    wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
    echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
-   sudo apt update
+   sudo apt-get update
    ```
 
 2. Install and start Grafana:
 
    ```bash
-   sudo apt install grafana -y
+   sudo apt-get install -y grafana
    sudo systemctl start grafana-server
    sudo systemctl enable grafana-server
    ```
