@@ -208,7 +208,9 @@ Grafana visualizes Prometheus metrics in dashboards.
    - Go to **Dashboards** > Select **New** > **New Dashboard**.
    - Click big **+** icon in **Panel** section > Select **Configure visualisation**.
    - Select the Prometheus data source.
+   - Switch from **Builder** to **Code** view
    - Try queries like:
+     - `rate(node_cpu_seconds_total{mode="user"}[5m])` (CPU usage)
      - `node_memory_MemFree_bytes` (Memory free bytes)
      - `node_hwmon_temp_celsius` (Pi temperature)
    - Save as “Pi Monitoring”.
